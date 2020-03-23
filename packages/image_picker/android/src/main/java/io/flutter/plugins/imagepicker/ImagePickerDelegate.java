@@ -12,9 +12,10 @@ import android.content.pm.ResolveInfo;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.provider.MediaStore;
-import androidx.annotation.VisibleForTesting;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.FileProvider;
+import android.support.annotation.VisibleForTesting;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.FileProvider;
+
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry;
@@ -66,7 +67,8 @@ import java.util.UUID;
 public class ImagePickerDelegate
     implements PluginRegistry.ActivityResultListener,
         PluginRegistry.RequestPermissionsResultListener {
-  @VisibleForTesting static final int REQUEST_CODE_CHOOSE_IMAGE_FROM_GALLERY = 2342;
+  @VisibleForTesting
+  static final int REQUEST_CODE_CHOOSE_IMAGE_FROM_GALLERY = 2342;
   @VisibleForTesting static final int REQUEST_CODE_TAKE_IMAGE_WITH_CAMERA = 2343;
   @VisibleForTesting static final int REQUEST_EXTERNAL_IMAGE_STORAGE_PERMISSION = 2344;
   @VisibleForTesting static final int REQUEST_CAMERA_IMAGE_PERMISSION = 2345;

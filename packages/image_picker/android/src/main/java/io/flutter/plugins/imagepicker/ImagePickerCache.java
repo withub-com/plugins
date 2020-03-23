@@ -7,8 +7,9 @@ package io.flutter.plugins.imagepicker;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import androidx.annotation.Nullable;
-import androidx.annotation.VisibleForTesting;
+import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
+
 import io.flutter.plugin.common.MethodCall;
 import java.util.HashMap;
 import java.util.Map;
@@ -99,7 +100,7 @@ class ImagePickerCache {
   }
 
   void saveResult(
-      @Nullable String path, @Nullable String errorCode, @Nullable String errorMessage) {
+          @Nullable String path, @Nullable String errorCode, @Nullable String errorMessage) {
 
     SharedPreferences.Editor editor = prefs.edit();
     if (path != null) {

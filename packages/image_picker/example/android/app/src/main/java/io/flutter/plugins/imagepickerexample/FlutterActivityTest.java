@@ -1,6 +1,7 @@
 package io.flutter.plugins.imagepickerexample;
 
-import androidx.test.rule.ActivityTestRule;
+import android.support.test.rule.ActivityTestRule;
+
 import dev.flutter.plugins.e2e.FlutterRunner;
 import io.flutter.embedding.android.FlutterActivity;
 import org.junit.Rule;
