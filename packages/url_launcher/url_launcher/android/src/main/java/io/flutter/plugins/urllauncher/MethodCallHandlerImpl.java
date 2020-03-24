@@ -1,8 +1,8 @@
 package io.flutter.plugins.urllauncher;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
-import androidx.annotation.Nullable;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -18,7 +18,8 @@ import java.util.Map;
 final class MethodCallHandlerImpl implements MethodCallHandler {
   private static final String TAG = "MethodCallHandlerImpl";
   private final UrlLauncher urlLauncher;
-  @Nullable private MethodChannel channel;
+  @Nullable
+  private MethodChannel channel;
 
   /** Forwards all incoming MethodChannel calls to the given {@code urlLauncher}. */
   MethodCallHandlerImpl(UrlLauncher urlLauncher) {

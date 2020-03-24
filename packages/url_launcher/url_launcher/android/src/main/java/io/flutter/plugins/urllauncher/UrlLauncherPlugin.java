@@ -1,8 +1,8 @@
 package io.flutter.plugins.urllauncher;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
@@ -16,7 +16,8 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 public final class UrlLauncherPlugin implements FlutterPlugin, ActivityAware {
   private static final String TAG = "UrlLauncherPlugin";
   @Nullable private MethodCallHandlerImpl methodCallHandler;
-  @Nullable private UrlLauncher urlLauncher;
+  @Nullable
+  private UrlLauncher urlLauncher;
 
   /**
    * Registers a plugin implementation that uses the stable {@code io.flutter.plugin.common}

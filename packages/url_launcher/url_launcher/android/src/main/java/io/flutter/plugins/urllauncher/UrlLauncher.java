@@ -7,12 +7,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Browser;
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;
 
 /** Launches components for URLs. */
 class UrlLauncher {
   private final Context applicationContext;
-  @Nullable private Activity activity;
+  @Nullable
+  private Activity activity;
 
   /**
    * Uses the given {@code applicationContext} for launching intents.
