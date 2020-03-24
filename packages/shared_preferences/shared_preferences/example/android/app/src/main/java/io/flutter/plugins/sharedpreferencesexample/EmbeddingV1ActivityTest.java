@@ -1,7 +1,9 @@
 
 package io.flutter.plugins.sharedpreferencesexample;
 
-import androidx.test.rule.ActivityTestRule;
+
+import android.support.test.rule.ActivityTestRule;
+
 import dev.flutter.plugins.e2e.FlutterRunner;
 import org.junit.Rule;
 import org.junit.runner.RunWith;

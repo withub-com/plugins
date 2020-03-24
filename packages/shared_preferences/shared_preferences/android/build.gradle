@@ -30,15 +30,27 @@ allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 16
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+
+configurations.all {
+    //制使用某个版本的依赖，若需强制多个依赖，可以逗号分割，
+    resolutionStrategy.force 'com.android.support:support-fragment:26.0.0',
+            'com.android.support:recyclerview-v7:26.0.0',
+            'com.android.support:appcompat-v7:26.0.0',
+            'com.android.support:support-core-ui:26.0.0',
+            'com.android.support:support-core-utils:26.0.0',
+            'com.android.support:support-compat:26.0.0',
+            'com.android.support:support-annotations:26.0.0',
+            'com.android.support:support-vector-drawable:26.0.0'
 }
 
 // TODO(cyanglaz): Remove this hack once androidx.lifecycle is included on stable. https://github.com/flutter/flutter/issues/42348
