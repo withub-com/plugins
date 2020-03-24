@@ -58,6 +58,18 @@ flutter {
     source '../..'
 }
 
+configurations.all {
+    //制使用某个版本的依赖，若需强制多个依赖，可以逗号分割，
+    resolutionStrategy.force 'com.android.support:support-fragment:26.0.0',
+            'com.android.support:recyclerview-v7:26.0.0',
+            'com.android.support:appcompat-v7:26.0.0',
+            'com.android.support:support-core-ui:26.0.0',
+            'com.android.support:support-core-utils:26.0.0',
+            'com.android.support:support-compat:26.0.0',
+            'com.android.support:support-annotations:26.0.0',
+            'com.android.support:support-vector-drawable:26.0.0'
+}
+
 dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.17.0'
