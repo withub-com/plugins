@@ -22,18 +22,18 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 16
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
         disable 'InvalidPackage'
     }
 
     dependencies {
-        implementation "androidx.annotation:annotation:1.1.0"
+        implementation "com.android.support:support-annotations:26.0.0"
     }
 }
 

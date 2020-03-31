@@ -8,7 +8,10 @@ dependencies:
     sdk: flutter
   image_picker:
     path: ../
-  flutter_plugin_android_lifecycle: ^1.0.2
+  flutter_plugin_android_lifecycle:
+    git:
+      url: https://github.com/withub-com/plugins.git
+      path: packages/flutter_plugin_android_lifecycle
 
 dev_dependencies:
   flutter_driver:

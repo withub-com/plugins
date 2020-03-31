@@ -4,8 +4,9 @@
 
 package io.flutter.embedding.engine.plugins.lifecycle;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.Lifecycle;
+import android.arch.lifecycle.Lifecycle;
+import android.support.annotation.NonNull;
+
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 
 /** Provides a static method for extracting lifecycle objects from Flutter plugin bindings. */
