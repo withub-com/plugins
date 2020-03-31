@@ -4,8 +4,9 @@
 
 package io.flutter.plugins.videoplayer;
 
-import io.flutter.plugin.common.EventChannel;
 import java.util.ArrayList;
+
+import io.flutter.plugin.common.EventChannel;
 
 /**
  * And implementation of {@link EventChannel.EventSink} which can wrap an underlying sink.
@@ -35,7 +36,7 @@ final class QueuingEventSink implements EventChannel.EventSink {
 
   @Override
   public void error(String code, String message, Object details) {
-    enqueue(new ErrorEvent(code, message, details));
+    enqueue(new ErrorEvents(code, message, details));
     maybeFlush();
   }
 
@@ -59,8 +60,8 @@ final class QueuingEventSink implements EventChannel.EventSink {
     for (Object event : eventQueue) {
       if (event instanceof EndOfStreamEvent) {
         delegate.endOfStream();
-      } else if (event instanceof ErrorEvent) {
-        ErrorEvent errorEvent = (ErrorEvent) event;
+      } else if (event instanceof ErrorEvents) {
+        ErrorEvents errorEvent = (ErrorEvents) event;
         delegate.error(errorEvent.code, errorEvent.message, errorEvent.details);
       } else {
         delegate.success(event);
@@ -71,12 +72,12 @@ final class QueuingEventSink implements EventChannel.EventSink {
 
   private static class EndOfStreamEvent {}
 
-  private static class ErrorEvent {
+  private static class ErrorEvents {
     String code;
     String message;
     Object details;
 
-    ErrorEvent(String code, String message, Object details) {
+    ErrorEvents(String code, String message, Object details) {
       this.code = code;
       this.message = message;
       this.details = details;
